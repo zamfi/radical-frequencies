@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07CB7B4D19A909B70038031F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7B4C19A909B70038031F /* Foundation.framework */; };
+		07CB7B4F19A909B70038031F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7B4E19A909B70038031F /* CoreGraphics.framework */; };
+		07CB7B5119A909B70038031F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7B5019A909B70038031F /* UIKit.framework */; };
+		07CB7B5719A909B70038031F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7B5519A909B70038031F /* InfoPlist.strings */; };
+		07CB7B5919A909B70038031F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CB7B5819A909B70038031F /* main.m */; };
+		07CB7B5D19A909B70038031F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CB7B5C19A909B70038031F /* AppDelegate.m */; };
+		07CB7B6019A909B70038031F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7B5E19A909B70038031F /* Main.storyboard */; };
+		07CB7B6319A909B70038031F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CB7B6219A909B70038031F /* ViewController.m */; };
+		07CB7B6519A909B70038031F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7B6419A909B70038031F /* Images.xcassets */; };
+		07CB7B6C19A909B70038031F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7B6B19A909B70038031F /* XCTest.framework */; };
+		07CB7B6D19A909B70038031F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7B4C19A909B70038031F /* Foundation.framework */; };
+		07CB7B6E19A909B70038031F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7B5019A909B70038031F /* UIKit.framework */; };
+		07CB7B7619A909B70038031F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7B7419A909B70038031F /* InfoPlist.strings */; };
+		07CB7B7819A909B70038031F /* Radical_FrequenciesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CB7B7719A909B70038031F /* Radical_FrequenciesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07CB7B6F19A909B70038031F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07CB7B4119A909B70038031F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07CB7B4819A909B70038031F;
+			remoteInfo = "Radical Frequencies";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07CB7B4919A909B70038031F /* Radical Frequencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radical Frequencies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CB7B4C19A909B70038031F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07CB7B4E19A909B70038031F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07CB7B5019A909B70038031F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07CB7B5419A909B70038031F /* Radical Frequencies-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Radical Frequencies-Info.plist"; sourceTree = "<group>"; };
+		07CB7B5619A909B70038031F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07CB7B5819A909B70038031F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07CB7B5A19A909B70038031F /* Radical Frequencies-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Radical Frequencies-Prefix.pch"; sourceTree = "<group>"; };
+		07CB7B5B19A909B70038031F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07CB7B5C19A909B70038031F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07CB7B5F19A909B70038031F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07CB7B6119A909B70038031F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07CB7B6219A909B70038031F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07CB7B6419A909B70038031F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07CB7B6A19A909B70038031F /* Radical FrequenciesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Radical FrequenciesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CB7B6B19A909B70038031F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		07CB7B7319A909B70038031F /* Radical FrequenciesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Radical FrequenciesTests-Info.plist"; sourceTree = "<group>"; };
+		07CB7B7519A909B70038031F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07CB7B7719A909B70038031F /* Radical_FrequenciesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Radical_FrequenciesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07CB7B4619A909B70038031F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB7B4F19A909B70038031F /* CoreGraphics.framework in Frameworks */,
+				07CB7B5119A909B70038031F /* UIKit.framework in Frameworks */,
+				07CB7B4D19A909B70038031F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07CB7B6719A909B70038031F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB7B6C19A909B70038031F /* XCTest.framework in Frameworks */,
+				07CB7B6E19A909B70038031F /* UIKit.framework in Frameworks */,
+				07CB7B6D19A909B70038031F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07CB7B4019A909B70038031F = {
+			isa = PBXGroup;
+			children = (
+				07CB7B5219A909B70038031F /* Radical Frequencies */,
+				07CB7B7119A909B70038031F /* Radical FrequenciesTests */,
+				07CB7B4B19A909B70038031F /* Frameworks */,
+				07CB7B4A19A909B70038031F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07CB7B4A19A909B70038031F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07CB7B4919A909B70038031F /* Radical Frequencies.app */,
+				07CB7B6A19A909B70038031F /* Radical FrequenciesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07CB7B4B19A909B70038031F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07CB7B4C19A909B70038031F /* Foundation.framework */,
+				07CB7B4E19A909B70038031F /* CoreGraphics.framework */,
+				07CB7B5019A909B70038031F /* UIKit.framework */,
+				07CB7B6B19A909B70038031F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07CB7B5219A909B70038031F /* Radical Frequencies */ = {
+			isa = PBXGroup;
+			children = (
+				07CB7B5B19A909B70038031F /* AppDelegate.h */,
+				07CB7B5C19A909B70038031F /* AppDelegate.m */,
+				07CB7B5E19A909B70038031F /* Main.storyboard */,
+				07CB7B6119A909B70038031F /* ViewController.h */,
+				07CB7B6219A909B70038031F /* ViewController.m */,
+				07CB7B6419A909B70038031F /* Images.xcassets */,
+				07CB7B5319A909B70038031F /* Supporting Files */,
+			);
+			path = "Radical Frequencies";
+			sourceTree = "<group>";
+		};
+		07CB7B5319A909B70038031F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07CB7B5419A909B70038031F /* Radical Frequencies-Info.plist */,
+				07CB7B5519A909B70038031F /* InfoPlist.strings */,
+				07CB7B5819A909B70038031F /* main.m */,
+				07CB7B5A19A909B70038031F /* Radical Frequencies-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07CB7B7119A909B70038031F /* Radical FrequenciesTests */ = {
+			isa = PBXGroup;
+			children = (
+				07CB7B7719A909B70038031F /* Radical_FrequenciesTests.m */,
+				07CB7B7219A909B70038031F /* Supporting Files */,
+			);
+			path = "Radical FrequenciesTests";
+			sourceTree = "<group>";
+		};
+		07CB7B7219A909B70038031F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07CB7B7319A909B70038031F /* Radical FrequenciesTests-Info.plist */,
+				07CB7B7419A909B70038031F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07CB7B4819A909B70038031F /* Radical Frequencies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07CB7B7B19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical Frequencies" */;
+			buildPhases = (
+				07CB7B4519A909B70038031F /* Sources */,
+				07CB7B4619A909B70038031F /* Frameworks */,
+				07CB7B4719A909B70038031F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Radical Frequencies";
+			productName = "Radical Frequencies";
+			productReference = 07CB7B4919A909B70038031F /* Radical Frequencies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07CB7B6919A909B70038031F /* Radical FrequenciesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07CB7B7E19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical FrequenciesTests" */;
+			buildPhases = (
+				07CB7B6619A909B70038031F /* Sources */,
+				07CB7B6719A909B70038031F /* Frameworks */,
+				07CB7B6819A909B70038031F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07CB7B7019A909B70038031F /* PBXTargetDependency */,
+			);
+			name = "Radical FrequenciesTests";
+			productName = "Radical FrequenciesTests";
+			productReference = 07CB7B6A19A909B70038031F /* Radical FrequenciesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07CB7B4119A909B70038031F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = TechLiminal;
+				TargetAttributes = {
+					07CB7B6919A909B70038031F = {
+						TestTargetID = 07CB7B4819A909B70038031F;
+					};
+				};
+			};
+			buildConfigurationList = 07CB7B4419A909B70038031F /* Build configuration list for PBXProject "Radical Frequencies" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07CB7B4019A909B70038031F;
+			productRefGroup = 07CB7B4A19A909B70038031F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07CB7B4819A909B70038031F /* Radical Frequencies */,
+				07CB7B6919A909B70038031F /* Radical FrequenciesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07CB7B4719A909B70038031F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB7B6519A909B70038031F /* Images.xcassets in Resources */,
+				07CB7B5719A909B70038031F /* InfoPlist.strings in Resources */,
+				07CB7B6019A909B70038031F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07CB7B6819A909B70038031F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB7B7619A909B70038031F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07CB7B4519A909B70038031F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB7B6319A909B70038031F /* ViewController.m in Sources */,
+				07CB7B5D19A909B70038031F /* AppDelegate.m in Sources */,
+				07CB7B5919A909B70038031F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07CB7B6619A909B70038031F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CB7B7819A909B70038031F /* Radical_FrequenciesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07CB7B7019A909B70038031F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07CB7B4819A909B70038031F /* Radical Frequencies */;
+			targetProxy = 07CB7B6F19A909B70038031F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07CB7B5519A909B70038031F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07CB7B5619A909B70038031F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07CB7B5E19A909B70038031F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07CB7B5F19A909B70038031F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07CB7B7419A909B70038031F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07CB7B7519A909B70038031F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07CB7B7919A909B70038031F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		07CB7B7A19A909B70038031F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07CB7B7C19A909B70038031F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
+				INFOPLIST_FILE = "Radical Frequencies/Radical Frequencies-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07CB7B7D19A909B70038031F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
+				INFOPLIST_FILE = "Radical Frequencies/Radical Frequencies-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		07CB7B7F19A909B70038031F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Radical Frequencies.app/Radical Frequencies";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Radical FrequenciesTests/Radical FrequenciesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07CB7B8019A909B70038031F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Radical Frequencies.app/Radical Frequencies";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
+				INFOPLIST_FILE = "Radical FrequenciesTests/Radical FrequenciesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07CB7B4419A909B70038031F /* Build configuration list for PBXProject "Radical Frequencies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07CB7B7919A909B70038031F /* Debug */,
+				07CB7B7A19A909B70038031F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07CB7B7B19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical Frequencies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07CB7B7C19A909B70038031F /* Debug */,
+				07CB7B7D19A909B70038031F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07CB7B7E19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical FrequenciesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07CB7B7F19A909B70038031F /* Debug */,
+				07CB7B8019A909B70038031F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07CB7B4119A909B70038031F /* Project object */;
+}
