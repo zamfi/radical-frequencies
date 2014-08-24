@@ -33,6 +33,12 @@
 
 @property (strong, nonatomic) NSTimer *bounce;
 
+
+@property (strong, nonatomic) UIImageView *lightBoxCurtains;
+
+@property (strong, nonatomic) UIImageView *activityDetails;
+
+
 @property (strong, nonatomic) RFNetworkHandler *networkHandler;
 
 - (IBAction)ShowLightbox:(id)sender;
