@@ -15,6 +15,8 @@
 //@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 @property (strong, nonatomic) MemberUIView *MemberView;
 
+@property (assign, nonatomic) BOOL displayingMemberInfo;
+
 @property (assign, nonatomic) BOOL goingUp;
 @property (strong, nonatomic) UIImageView *arrow;
 

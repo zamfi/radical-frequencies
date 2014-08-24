@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize goingUp, arrow, scheduleImage, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
+@synthesize displayingMemberInfo, goingUp, arrow, scheduleImage, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
 
 - (void)amuletWasTaggedByMember:(NSDictionary *)memberInfo shouldDisplay:(NSDictionary *)displayInfo {
 //    UIAlertView *alertView =
@@ -25,14 +25,43 @@
 //                     otherButtonTitles:nil ];
 //    [alertView show];
     
-    [self displayMemberInfo:[memberInfo objectForKey:@"firstName"]];
+    if (self.displayingMemberInfo == true) {
+        
+        [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        
+        [self displayMemberInfo:[memberInfo objectForKey:@"firstName"]];
+    
+    } else {
+        
+        [self displayMemberInfo:[memberInfo objectForKey:@"firstName"]];
+    
+    }
 }
+
+//- (void) removeFromSuperviewSlowly
+//{
+//    
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.networkHandler = [[RFNetworkHandler alloc] initWithDelegate:self];
+    
+    [self setUpHomescreen];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) setUpHomescreen
+{
+    self.displayingMemberInfo = false;
     
     self.goingUp = true;
     self.arrow = [[UIImageView alloc] init];
@@ -49,7 +78,7 @@
     self.TLHeader.image = [UIImage imageNamed:@"TechLiminalBanner.png"];
     self.TLHeader.frame = CGRectMake(0, -302, 768, 302);
     [self.view addSubview:TLHeader];
-
+    
     [UIView animateWithDuration:1.5 animations:^{
         self.TLHeader.frame = CGRectMake(0, 0, 768, 302);
     }];
@@ -60,7 +89,7 @@
                                    userInfo:nil
                                     repeats:NO];
     
-//    self.welcomeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    //    self.welcomeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     
     CGRect welcFrame;
     welcFrame.origin.x = 0;
@@ -72,7 +101,7 @@
     [self.welcomeI setText:@"Welcome to Tech Liminal"];
     [self.welcomeI setTextAlignment:UITextAlignmentCenter];
     [self.welcomeI setFont:[UIFont fontWithName:@"AvenirNext-Regular" size:46]];
-
+    
     //
     
     
@@ -87,32 +116,25 @@
     [self.touchAmuletI setTextAlignment:UITextAlignmentCenter];
     [self.touchAmuletI setTextColor:[UIColor colorWithRed:246.0/255.0 green:70.0/255.0 blue:41.0/255.0 alpha:1.0]];
     [self.touchAmuletI setFont:[UIFont fontWithName:@"AvenirNext-DemiBold" size:30]];
-
+    
     //
-
+    
     
     [self startAnimationWithDuration];
     
     int animationDuration = 1;
     
     self.bounce = [NSTimer scheduledTimerWithTimeInterval:0.6
-                                     target:self
-                                   selector:@selector(startAnimationWithDuration)
-                                   userInfo:nil
-                                    repeats:YES];
+                                                   target:self
+                                                 selector:@selector(startAnimationWithDuration)
+                                                 userInfo:nil
+                                                  repeats:YES];
     
 	// Do any additional setup after loading the view, typically from a nib.
     
-//    WebView.scalesPageToFit = true;
-//    [WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techliminal.com/"]]];
+    //    WebView.scalesPageToFit = true;
+    //    [WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techliminal.com/"]]];
 
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) welcomeToTL
@@ -139,7 +161,17 @@
     
     NSString *memberName = @"Joseph";
     
-    [self displayMemberInfo:memberName];
+    if (self.displayingMemberInfo == true) {
+        
+        [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        
+        [self displayMemberInfo:memberName];
+        
+    } else {
+        
+        [self displayMemberInfo:memberName];
+        
+    }
     
 //    [UIView transitionWithView:self.view
 //                      duration:0.25
@@ -313,6 +345,9 @@
     [self.scheduleImage addGestureRecognizer:tapGesture];
     tapGesture.delegate = self;
 
+    
+    self.displayingMemberInfo = true;
+    
 //    [tapGesture release];
 }
 
