@@ -73,11 +73,61 @@
 - (void) confirmPayment
 {
     
+    self.payCheckmark.frame = CGRectMake(self.view.frame.size.width / 2 - 41, self.view.frame.size.height - 170, 83, 78);
+
+    self.payCheckmark.alpha = 0.0;
     
+    [self.view addSubview:self.payCheckmark];
+
+    [UIView animateWithDuration:0.4 animations:^{
+        self.payCheckmark.alpha = 1.0;
+        self.payCheckmark.transform = CGAffineTransformMakeScale(1.5, 1.5);
+    }];
+
+    [NSTimer scheduledTimerWithTimeInterval:2
+                                     target:self
+                                   selector: @selector(killPaymentBox)
+                                   userInfo:nil
+                                    repeats:NO];
+    
+    [self killArrow];
+
     
 }
 
-- (void)viewDidLoad
+- (void) killPaymentBox {
+    
+    [UIView animateWithDuration:0.3
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.payPrompt.alpha = 0.0;
+                         [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
+                     }
+                     completion:^(BOOL finished){
+                         [self.payPrompt removeFromSuperview];
+                         [self.payCheckmark removeFromSuperview];
+                     }
+     ];
+    
+    [UIView animateWithDuration:0.2
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.payCheckmark.alpha = 0.0;
+                         self.payCheckmark.transform = CGAffineTransformMakeScale(1, 1);
+                     }
+                     completion:nil];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        
+    }];
+    
+//    self.payCheckmark.frame = CGRectMake(self.view.frame.size.width / 2 - 41, self.view.frame.size.height - 170, 83, 78);
+    
+}
+
+- (void) viewDidLoad
 {
     [super viewDidLoad];
     
@@ -102,7 +152,6 @@
     
     self.payCheckmark = [[UIImageView alloc] init];
     self.payCheckmark.image = [UIImage imageNamed:@"Completed-Payment-Check.png"];
-    [self.view addSubview:self.payCheckmark];
     
     self.goingUp = true;
     self.arrow = [[UIImageView alloc] init];
@@ -535,6 +584,8 @@
                          completion:nil];
         
         [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
+        
+        [self.payCheckmark removeFromSuperview];
         
         [self killArrow];
 
