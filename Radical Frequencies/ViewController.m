@@ -562,85 +562,89 @@
 //    }
     
 
-    NSLog(@"Activity tapped.");
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        
+        NSLog(@"Activity tapped.");
 
-    CGPoint tapPoint = [sender locationInView:self.activityDetails];
-    int tapX = (int) tapPoint.x;
-    int tapY = (int) tapPoint.y;
-    NSLog(@"TAPPED X:%d Y:%d", tapX, tapY);
+        CGPoint tapPoint = [sender locationInView:self.activityDetails];
+        int tapX = (int) tapPoint.x;
+        int tapY = (int) tapPoint.y;
+        NSLog(@"TAPPED X:%d Y:%d", tapX, tapY);
 
-    if (tapX >= 627 && tapX <= 699 && tapY >= 40 && tapY <= 109) {
-        [UIView animateWithDuration:0.3
-                              delay:0
-                            options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{
-                             
-                             self.activityDetails.alpha = 0.0;
-                         }
-                         completion:nil];
-        
-        [UIView animateWithDuration:0.3
-                              delay:0
-                            options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{
-                             
-                             self.lightBoxCurtains.alpha = 0.0;
-                         }
-                         completion:nil];
-        
-        [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
-        
-        [self.payCheckmark removeFromSuperview];
-        
-        [self killArrow];
+        if (tapX >= 627 && tapX <= 699 && tapY >= 40 && tapY <= 109) {
+            [UIView animateWithDuration:0.3
+                                  delay:0
+                                options:UIViewAnimationOptionCurveEaseIn
+                             animations:^{
+                                 
+                                 self.activityDetails.alpha = 0.0;
+                             }
+                             completion:nil];
+            
+            [UIView animateWithDuration:0.3
+                                  delay:0
+                                options:UIViewAnimationOptionCurveEaseIn
+                             animations:^{
+                                 
+                                 self.lightBoxCurtains.alpha = 0.0;
+                             }
+                             completion:nil];
+            
+            [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
+            
+            [self.payCheckmark removeFromSuperview];
+            
+            [self killArrow];
 
-    }
-    
-    if (tapX >= 512 && tapX <= 662 && tapY >= 345 && tapY <= 442) {
-
-        NSLog(@"Display payment");
-        
-        [self.view addSubview:self.payPrompt];
-        
-        self.payPrompt.alpha = 0.0;
-        [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
-        
-        int currentOriginY = self.payPrompt.frame.origin.y - self.payPrompt.frame.size.height;
-        NSLog(@"%d", currentOriginY);
-        
-        [UIView animateWithDuration:0.3
-                              delay:0
-                            options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{
-                             self.payPrompt.alpha = 1.0;
-                         }
-                         completion:nil];
-        
-        [UIView animateWithDuration:0.3
-                              delay:0
-                            options:UIViewAnimationOptionCurveEaseIn
-                         animations:^{
-                             [self.payPrompt setFrame:CGRectMake(0, 488, 768, 536)];
-                         }
-                         completion:nil];
-        
-        self.awaitingPaymentConfirmtion = true;
-        
-        [self arrowPrompt];
-        
-    }
-    
-    if (tapX >= 255 && tapX <= 480 && tapY >= 714 && tapY <= 767) {
-        
-        
-        
-        NSLog(@"Paying with PayPal!");
-        
-        if (self.payingWithPayPal == true) {
-            [self payWithPayPal];
         }
         
-        self.payingWithPayPal = false;
+        if (tapX >= 512 && tapX <= 662 && tapY >= 345 && tapY <= 442) {
+
+            NSLog(@"Display payment");
+            
+            [self.view addSubview:self.payPrompt];
+            
+            self.payPrompt.alpha = 0.0;
+            [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
+            
+            int currentOriginY = self.payPrompt.frame.origin.y - self.payPrompt.frame.size.height;
+            NSLog(@"%d", currentOriginY);
+            
+            [UIView animateWithDuration:0.3
+                                  delay:0
+                                options:UIViewAnimationOptionCurveEaseIn
+                             animations:^{
+                                 self.payPrompt.alpha = 1.0;
+                             }
+                             completion:nil];
+            
+            [UIView animateWithDuration:0.3
+                                  delay:0
+                                options:UIViewAnimationOptionCurveEaseIn
+                             animations:^{
+                                 [self.payPrompt setFrame:CGRectMake(0, 488, 768, 536)];
+                             }
+                             completion:nil];
+            
+            self.awaitingPaymentConfirmtion = true;
+            
+            [self arrowPrompt];
+            
+        }
+        
+        if (tapX >= 255 && tapX <= 480 && tapY >= 714 && tapY <= 767) {
+            
+            
+            
+            NSLog(@"Paying with PayPal!");
+            
+            if (self.payingWithPayPal == true) {
+                [self payWithPayPal];
+            }
+            
+            self.payingWithPayPal = false;
+            
+        }
         
     }
 
