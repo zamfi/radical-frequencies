@@ -288,8 +288,40 @@
     [self.bounce invalidate];
     self.bounce = nil;
     
+    self.scheduleImage.userInteractionEnabled = YES;
+    UILongPressGestureRecognizer *tapGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+//    tapGesture.numberOfTapsRequired = 1;
+    tapGesture.minimumPressDuration = 0.1;
+    [self.scheduleImage addGestureRecognizer:tapGesture];
+    tapGesture.delegate = self;
 
+//    [tapGesture release];
 }
+
+-(void) handleTapGesture:(UIGestureRecognizer *) sender {
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"Hold.");
+        self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-Depressed-1.png"];
+    }
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"Release.");
+        self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-1.png"];
+    }
+
+//    
+//    NSLog(@"Tapped.");
+//
+//    CGPoint tapPoint = [sender locationInView:self.scheduleImage];
+//    int tapX = (int) tapPoint.x;
+//    int tapY = (int) tapPoint.y;
+//    NSLog(@"TAPPED X:%d Y:%d", tapX, tapY);
+//    
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"How are you?" delegate:nil cancelButtonTitle:@"I'm awesome." otherButtonTitles:nil];
+//    [alert show];
+}
+
+
 
 - (void)moveImage:(UIImageView *)image duration:(NSTimeInterval)duration
             curve:(int)curve x:(CGFloat)x y:(CGFloat)y

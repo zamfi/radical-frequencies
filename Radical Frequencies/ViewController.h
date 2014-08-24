@@ -10,7 +10,7 @@
 #import "MemberUIView.h"
 #import "RFNetworkHandler.h"
 
-@interface ViewController : UIViewController <NetworkHandlerDelegate>
+@interface ViewController : UIViewController <NetworkHandlerDelegate, UIGestureRecognizerDelegate>
 
 //@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 @property (strong, nonatomic) MemberUIView *MemberView;
