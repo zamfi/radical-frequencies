@@ -14,10 +14,11 @@
 - (id)initWithDelegate:(id <NetworkHandlerDelegate>)delegate {
     self = [super init];
     self.delegate = delegate;
+    self.lastTagTime = [[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]*1000] unsignedLongLongValue];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(pingServerForTags) userInfo:nil repeats:YES];
     
-    self.checkUrl = [NSString stringWithFormat:@"http://jd-mbp.local:8000/checkForTags?shared_secret=%@", [@"O[RVeWmPrm4OIzmXz&C}w-CM!m:f7*I" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.!~*'()"]]];
-    self.displayDataUrl = [NSString stringWithFormat:@"http://jd-mbp.local:8000/getMemberDisplayData?shared_secret=%@", [@"O[RVeWmPrm4OIzmXz&C}w-CM!m:f7*I" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.!~*'()"]]];
+    self.checkUrl = [NSString stringWithFormat:@"http://amulet.zamfi.net:8000/checkForTags?shared_secret=%@", [@"O[RVeWmPrm4OIzmXz&C}w-CM!m:f7*I" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.!~*'()"]]];
+    self.displayDataUrl = [NSString stringWithFormat:@"http://amulet.zamfi.net:8000/getMemberDisplayData?shared_secret=%@", [@"O[RVeWmPrm4OIzmXz&C}w-CM!m:f7*I" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.!~*'()"]]];
     return self;
 }
 
@@ -35,12 +36,12 @@
         NSDictionary * response = (NSDictionary *)responseObject;
         
         if ([@"ok" isEqualToString:[response objectForKey:@"status"]]) {
-            NSLog(@"Success getting display data! %@", response);
+//            NSLog(@"Success getting display data! %@", response);
             NSDictionary *data = [response objectForKey:@"data"];
             [self.delegate amuletWasTaggedByMember:[data objectForKey:@"member"]
                                      shouldDisplay:[data objectForKey:@"events"]];
         } else {
-            NSLog(@"Weird json value: %@", response);
+//            NSLog(@"Weird json value: %@", response);
             UIAlertView *alertView =
             [[UIAlertView alloc] initWithTitle:@"Error getting display data! (1)"
                                        message:@"Unexpected JSON status value"
@@ -80,14 +81,14 @@
         NSDictionary * response = (NSDictionary *)responseObject;
 
         if ([@"ok" isEqualToString:[response objectForKey:@"status"]]) {
-            NSLog(@"Success checking for tags since %llu! %@", self.lastTagTime, response);
+//            NSLog(@"Success checking for tags since %llu! %@", self.lastTagTime, response);
             NSDictionary *lastId = [[response objectForKey:@"tags"] lastObject];
             if (lastId != NULL) {
                 self.lastTagTime = [[lastId objectForKey:@"date"] unsignedLongLongValue];
                 [self pullMemberDisplayData:[[lastId objectForKey:@"id"] unsignedIntValue]];
             }
         } else {
-            NSLog(@"Weird json value: %@", response);
+//            NSLog(@"Weird json value: %@", response);
             UIAlertView *alertView =
             [[UIAlertView alloc] initWithTitle:@"Error checking for tags! (1)"
                                        message:@"Unexpected JSON status value"
