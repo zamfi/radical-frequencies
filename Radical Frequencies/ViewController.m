@@ -73,6 +73,8 @@
 - (void) confirmPayment
 {
     
+    self.awaitingPaymentConfirmtion = false;
+    
     self.payCheckmark.frame = CGRectMake(self.view.frame.size.width / 2 - 41, self.view.frame.size.height - 170, 83, 78);
 
     self.payCheckmark.alpha = 0.0;
@@ -132,6 +134,8 @@
     [super viewDidLoad];
     
     self.networkHandler = [[RFNetworkHandler alloc] initWithDelegate:self];
+    
+//    [headingButton setTitleColor:[UIColor colorWithRed:36/255.0 green:71/255.0 blue:113/255.0 alpha:1.0] forState:UIControlStateNormal];
     
     [self setUpHomescreen];
     
