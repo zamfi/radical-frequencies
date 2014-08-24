@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSString *checkUrl;
 @property (strong, nonatomic) NSString *displayDataUrl;
+@property (assign, atomic) Boolean serverUp;
 
 - (id)initWithDelegate:(id <NetworkHandlerDelegate>)delegate;
 - (void)pingServerForTags;

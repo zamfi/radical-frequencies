@@ -42,25 +42,26 @@
                                      shouldDisplay:[data objectForKey:@"events"]];
         } else {
 //            NSLog(@"Weird json value: %@", response);
-            UIAlertView *alertView =
-            [[UIAlertView alloc] initWithTitle:@"Error getting display data! (1)"
-                                       message:@"Unexpected JSON status value"
-                                      delegate:nil
-                             cancelButtonTitle:@"OK"
-                             otherButtonTitles:nil ];
-            [alertView show];
-            [self.timer invalidate];
+//            UIAlertView *alertView =
+//            [[UIAlertView alloc] initWithTitle:@"Error getting display data! (1)"
+//                                       message:@"Unexpected JSON status value"
+//                                      delegate:nil
+//                             cancelButtonTitle:@"OK"
+//                             otherButtonTitles:nil ];
+//            [alertView show];
+//            [self.timer invalidate];
         }
-        
+        self.serverUp = true;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *alertView =
-        [[UIAlertView alloc] initWithTitle:@"Error getting display data! (2)"
-                                   message:[error localizedDescription]
-                                  delegate:nil
-                         cancelButtonTitle:@"OK"
-                         otherButtonTitles:nil];
-        [alertView show];
-        [self.timer invalidate];
+//        UIAlertView *alertView =
+//        [[UIAlertView alloc] initWithTitle:@"Error getting display data! (2)"
+//                                   message:[error localizedDescription]
+//                                  delegate:nil
+//                         cancelButtonTitle:@"OK"
+//                         otherButtonTitles:nil];
+//        [alertView show];
+//        [self.timer invalidate];
+        self.serverUp = false;
     }];
     
     [operation start];
@@ -89,25 +90,26 @@
             }
         } else {
 //            NSLog(@"Weird json value: %@", response);
-            UIAlertView *alertView =
-            [[UIAlertView alloc] initWithTitle:@"Error checking for tags! (1)"
-                                       message:@"Unexpected JSON status value"
-                                      delegate:nil
-                             cancelButtonTitle:@"OK"
-                             otherButtonTitles:nil ];
-            [alertView show];
-            [self.timer invalidate];
+//            UIAlertView *alertView =
+//            [[UIAlertView alloc] initWithTitle:@"Error checking for tags! (1)"
+//                                       message:@"Unexpected JSON status value"
+//                                      delegate:nil
+//                             cancelButtonTitle:@"OK"
+//                             otherButtonTitles:nil ];
+//            [alertView show];
+//            [self.timer invalidate];
         }
-
+        self.serverUp = true;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *alertView =
-            [[UIAlertView alloc] initWithTitle:@"Error checking for tags! (2)"
-                                       message:[error localizedDescription]
-                                      delegate:nil
-                             cancelButtonTitle:@"OK"
-                             otherButtonTitles:nil];
-        [alertView show];
-        [self.timer invalidate];
+//        UIAlertView *alertView =
+//            [[UIAlertView alloc] initWithTitle:@"Error checking for tags! (2)"
+//                                       message:[error localizedDescription]
+//                                      delegate:nil
+//                             cancelButtonTitle:@"OK"
+//                             otherButtonTitles:nil];
+//        [alertView show];
+//        [self.timer invalidate];
+        self.serverUp = true;
     }];
     
     [operation start];
