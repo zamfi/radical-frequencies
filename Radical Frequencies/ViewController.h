@@ -28,6 +28,7 @@
 @property (strong, nonatomic) UILabel *nameI;
 
 @property (strong, nonatomic) UIView *scheduleI;
+@property (strong, nonatomic) UIImageView *scheduleImage;
 
 @property (strong, nonatomic) NSTimer *bounce;
 

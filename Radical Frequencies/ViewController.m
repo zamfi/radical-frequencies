@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize goingUp, arrow, bounce, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
+@synthesize goingUp, arrow, scheduleImage, bounce, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
 
 - (void)viewDidLoad
 {
@@ -23,6 +23,9 @@
     self.goingUp = true;
     self.arrow = [[UIImageView alloc] init];
     self.arrow.image = [UIImage imageNamed:@"arrow-1.png"];
+    
+    self.scheduleImage = [[UIImageView alloc] init];
+    self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-1.png"];
     
     self.TLHeader = [[UIImageView alloc] init];
     self.TLHeader.image = [UIImage imageNamed:@"TechLiminalBanner.png"];
@@ -156,7 +159,7 @@
     int xOrigin = 0;
     int yOrigin = 0;
     int boxWidth = self.view.frame.size.width;
-    int boxHeight = self.view.frame.size.height;
+    int boxHeight = 0.3 * (self.view.frame.size.height);
     
     
     self.greetingsI = [[UIView alloc] initWithFrame:CGRectMake(xOrigin, yOrigin, boxWidth, boxHeight)];
@@ -169,8 +172,11 @@
         self.greetingsI.frame = CGRectMake(xOrigin, yOrigin, boxWidth, boxHeight);
     }];
 
-    self.greetingsI.layer.borderColor = [UIColor grayColor].CGColor;
-    self.greetingsI.layer.borderWidth = 1.0f;
+//    self.greetingsI.layer.borderColor = [UIColor grayColor].CGColor;
+//    self.greetingsI.layer.borderWidth = 1.0f;
+
+//    self.greetingsI.layer.borderColor = [UIColor grayColor].CGColor;
+//    self.greetingsI.layer.borderWidth = 1.0f;
 
     
     CGRect helloFrame;
@@ -187,15 +193,11 @@
     [self.greetingsI addSubview:self.helloI];
     
     
-//    hello.layer.borderColor = [UIColor grayColor].CGColor;
-//    hello.layer.borderWidth = 1.0f;
 
-    
-    
     
     CGRect nameFrame;
     nameFrame.origin.x = 0;
-    nameFrame.origin.y = helloFrame.origin.y + helloFrame.size.height + 7;
+    nameFrame.origin.y = helloFrame.origin.y + helloFrame.size.height + 32;
     nameFrame.size.width = self.greetingsI.frame.size.width;
     nameFrame.size.height = 80;
     
@@ -206,7 +208,40 @@
     
     [self.greetingsI addSubview:name];
 
+    [self.welcomeI setFont:[UIFont fontWithName:@"AvenirNext-UltraLight" size:46]];
+    
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         [self.welcomeI setFrame:CGRectMake(self.welcomeI.frame.origin.x, self.welcomeI.frame.origin.y - 70, self.welcomeI.frame.size.width, self.welcomeI.frame.size.height)];
+                     }
+                     completion:nil];
 
+    
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.touchAmuletI.alpha = 0.0;
+                         [self.touchAmuletI setFrame:CGRectMake(self.touchAmuletI.frame.origin.x, self.view.frame.size.height, self.touchAmuletI.frame.size.width, self.touchAmuletI.frame.size.height)];
+                         
+                     }
+                     completion:nil];
+    
+    
+    self.scheduleImage.frame = CGRectMake(0, self.view.frame.size.height, 768, 466);
+    [self.view addSubview:self.scheduleImage];
+
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         [self.scheduleImage setFrame:CGRectMake(self.scheduleImage.frame.origin.x, self.view.frame.size.height - scheduleImage.frame.size.height, self.scheduleImage.frame.size.width, self.scheduleImage.frame.size.height)];
+                         
+                     }
+                     completion:nil];
+    
 //    name.layer.borderColor = [UIColor grayColor].CGColor;
 //    name.layer.borderWidth = 1.0f;
 
