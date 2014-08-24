@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MemberUIView.h"
+#import "RFNetworkHandler.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NetworkHandlerDelegate>
 
 //@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 @property (strong, nonatomic) MemberUIView *MemberView;
@@ -32,6 +33,10 @@
 
 @property (strong, nonatomic) NSTimer *bounce;
 
+@property (strong, nonatomic) RFNetworkHandler *networkHandler;
+
 - (IBAction)ShowLightbox:(id)sender;
+
+- (void)amuletWasTaggedByMember:(NSDictionary *)memberInfo shouldDisplay:(NSDictionary *)displayInfo;
 
 @end

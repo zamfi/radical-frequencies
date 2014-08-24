@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
     
+    self.networkHandler = [[RFNetworkHandler alloc] initWithDelegate:self];
+    
     self.goingUp = true;
     self.arrow = [[UIImageView alloc] init];
     self.arrow.image = [UIImage imageNamed:@"arrow-1.png"];
