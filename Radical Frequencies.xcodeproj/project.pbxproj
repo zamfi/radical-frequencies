@@ -185,6 +185,7 @@
 				69960C4B19A9695000CFFE96 /* UIKit+AFNetworking */,
 				07CB7B9719A952170038031F /* arrow-1.png */,
 				07CB7B9919A95CE70038031F /* TechLiminalBanner.png */,
+				07CB7B9B19A96E280038031F /* OrangePanel-1.png */,
 				07CB7B5B19A909B70038031F /* AppDelegate.h */,
 				07CB7B5C19A909B70038031F /* AppDelegate.m */,
 				07CB7B5E19A909B70038031F /* Main.storyboard */,
@@ -360,6 +361,7 @@
 				07CB7B6519A909B70038031F /* Images.xcassets in Resources */,
 				07CB7B5719A909B70038031F /* InfoPlist.strings in Resources */,
 				07CB7B9819A952170038031F /* arrow-1.png in Resources */,
+				07CB7B9C19A96E280038031F /* OrangePanel-1.png in Resources */,
 				07CB7B9A19A95CE70038031F /* TechLiminalBanner.png in Resources */,
 				07CB7B6019A909B70038031F /* Main.storyboard in Resources */,
 			);
