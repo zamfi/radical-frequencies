@@ -18,8 +18,13 @@
 @interface RFNetworkHandler : NSObject
 
 @property (weak, nonatomic) id <NetworkHandlerDelegate> delegate;
+@property (assign, atomic) unsigned long long lastTagTime;
+@property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) NSString *checkUrl;
+@property (strong, nonatomic) NSString *displayDataUrl;
 
 - (id)initWithDelegate:(id <NetworkHandlerDelegate>)delegate;
+- (void)pingServerForTags;
 
 @end
 

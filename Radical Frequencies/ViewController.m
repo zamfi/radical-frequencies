@@ -16,6 +16,16 @@
 
 @synthesize goingUp, arrow, scheduleImage, bounce, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
 
+- (void)amuletWasTaggedByMember:(NSDictionary *)memberInfo shouldDisplay:(NSDictionary *)displayInfo {
+    UIAlertView *alertView =
+    [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Welcome, %@!", [memberInfo objectForKey:@"firstName"]]
+                               message:@"Good to see you again!"
+                              delegate:nil
+                     cancelButtonTitle:@"OK"
+                     otherButtonTitles:nil ];
+    [alertView show];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
