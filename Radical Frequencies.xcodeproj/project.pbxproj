@@ -26,6 +26,7 @@
 		07CB7B9219A91EE20038031F /* MemberUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CB7B9119A91EE20038031F /* MemberUIView.m */; };
 		07CB7B9419A937BD0038031F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7B9319A937BD0038031F /* QuartzCore.framework */; };
 		07CB7B9819A952170038031F /* arrow-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7B9719A952170038031F /* arrow-1.png */; };
+		07CB7B9A19A95CE70038031F /* TechLiminalBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7B9919A95CE70038031F /* TechLiminalBanner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		07CB7B9119A91EE20038031F /* MemberUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberUIView.m; sourceTree = "<group>"; };
 		07CB7B9319A937BD0038031F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07CB7B9719A952170038031F /* arrow-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-1.png"; sourceTree = "<group>"; };
+		07CB7B9919A95CE70038031F /* TechLiminalBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TechLiminalBanner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				07CB7B9719A952170038031F /* arrow-1.png */,
+				07CB7B9919A95CE70038031F /* TechLiminalBanner.png */,
 				07CB7B5B19A909B70038031F /* AppDelegate.h */,
 				07CB7B5C19A909B70038031F /* AppDelegate.m */,
 				07CB7B5E19A909B70038031F /* Main.storyboard */,
@@ -252,6 +255,7 @@
 				07CB7B6519A909B70038031F /* Images.xcassets in Resources */,
 				07CB7B5719A909B70038031F /* InfoPlist.strings in Resources */,
 				07CB7B9819A952170038031F /* arrow-1.png in Resources */,
+				07CB7B9A19A95CE70038031F /* TechLiminalBanner.png in Resources */,
 				07CB7B6019A909B70038031F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
