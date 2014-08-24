@@ -66,6 +66,7 @@
     self.goingUp = true;
     self.arrow = [[UIImageView alloc] init];
     self.arrow.image = [UIImage imageNamed:@"arrow-1.png"];
+    [self.view addSubview:self.arrow];
     
     self.scheduleImage = [[UIImageView alloc] init];
     self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-1.png"];
@@ -341,6 +342,10 @@
 //    [UIView transitionFromView:fromView toView:toView duration:0.4f options:UIViewAnimationOptionTransitionFlipFromLeft completion:NULL];
     
     
+    [self.view sendSubviewToBack:self.arrow];
+    self.arrow.hidden = true;
+    
+    [self killArrow];
     
     [self.bounce invalidate];
     self.bounce = nil;
@@ -487,6 +492,8 @@
                          completion:nil];
         
         [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
+        
+        [self killArrow];
 
     }
     
@@ -518,6 +525,14 @@
                          }
                          completion:nil];
         
+        [self arrowPrompt];
+        
+    }
+    
+    if (tapX >= 255 && tapX <= 480 && tapY >= 714 && tapY <= 767) {
+        
+        NSLog(@"Paying with PayPal!");
+        
     }
 
     
@@ -527,6 +542,66 @@
     
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"How are you?" delegate:nil cancelButtonTitle:@"I'm awesome." otherButtonTitles:nil];
 //    [alert show];
+    
+}
+
+- (void) arrowPrompt
+{
+    
+    [self.bounce invalidate];
+    self.bounce = nil;
+    
+    self.goingUp = false;
+//    self.arrow = [[UIImageView alloc] init];
+//    self.arrow.image = [UIImage imageNamed:@"arrow-1.png"];
+    
+    [self.view addSubview:self.arrow];
+    self.arrow.hidden = false;
+    
+    self.arrow.alpha = 0.0;
+    
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.arrow.alpha = 1.0;
+                     }
+                     completion:nil];
+
+    
+    
+//    [self startAnimationWithDuration];
+    
+//    int animationDuration = 1;
+    
+    self.bounce = [NSTimer scheduledTimerWithTimeInterval:0.6
+                                                   target:self
+                                                 selector:@selector(startAnimationWithDuration)
+                                                 userInfo:nil
+                                                  repeats:YES];
+    NSLog(@"Arrow prompt.");
+    
+    
+}
+
+- (void) killArrow
+{
+    
+    [self.bounce invalidate];
+    self.bounce = nil;
+    
+    self.arrow.alpha = 1.0;
+    
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.arrow.alpha = 0.0;
+                     }
+                     completion:nil];
+
+    self.arrow.hidden = true;
+    [self.arrow removeFromSuperview];
     
 }
 
@@ -554,35 +629,39 @@
 {
 //    UIImageView *imageToMove = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow-1.png"]];
 
-    UIImageView *imageToMove = self.arrow;
+//    UIImageView *imageToMove = self.arrow;
     
     int imageWidth = 113;
     int imageHeight = 152;
-    int bounceHeight = 40;
-    int gapAtBottom = 40;
+    int bounceHeight = 30;
+    int gapAtBottom = 20;
     
     if (self.goingUp == true) {
+        
+        NSLog(@"Going down.");
     
         int originY = self.view.frame.size.height - imageHeight - bounceHeight - gapAtBottom;
         
-        imageToMove.frame = CGRectMake((self.view.frame.size.width / 2) - (imageWidth / 2), originY, imageWidth, imageHeight);
-        [self.view addSubview:imageToMove];
+        self.arrow.frame = CGRectMake((self.view.frame.size.width / 2) - (imageWidth / 2), originY, imageWidth, imageHeight);
+//        [self.view addSubview:self.arrow];
         
         // Move the image
-        [self moveImage:imageToMove duration:0.5
+        [self moveImage:self.arrow duration:0.5
                   curve:UIViewAnimationCurveEaseInOut x:0 y:(bounceHeight / 2)];
         
         self.goingUp = false;
         
     } else {
         
+        NSLog(@"Going UP.");
+        
         int originY = self.view.frame.size.height - imageHeight - gapAtBottom;
         
-        imageToMove.frame = CGRectMake((self.view.frame.size.width / 2) - (imageWidth / 2), originY, imageWidth, imageHeight);
-        [self.view addSubview:imageToMove];
+        self.arrow.frame = CGRectMake((self.view.frame.size.width / 2) - (imageWidth / 2), originY, imageWidth, imageHeight);
+//        [self.view addSubview:self.arrow];
         
         // Move the image
-        [self moveImage:imageToMove duration:0.5
+        [self moveImage:self.arrow duration:0.5
                   curve:UIViewAnimationCurveEaseInOut x:0 y:(-1 * (bounceHeight / 2))];
 
         self.goingUp = true;
