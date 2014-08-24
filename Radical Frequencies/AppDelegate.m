@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
     // Override point for customization after application launch.
     return YES;
 }
@@ -45,50 +45,50 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
-    self.registered = YES;
-    [self sendProviderDeviceToken:devToken]; // custom method
-}
+//- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
+//    self.registered = YES;
+//    [self sendProviderDeviceToken:devToken]; // custom method
+//}
+//
+//- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+//    NSLog(@"Error in registration. Error: %@", err);
+//}
 
-- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
-    NSLog(@"Error in registration. Error: %@", err);
-}
-
-static NSString * const BaseURLString = @"https://jd-mbp.local:8000/registerDevice";
-
-- (void) sendProviderDeviceToken:(NSData *)devToken {
-    const void *devTokenBytes = [devToken bytes];
-    NSURL *url = [NSURL URLWithString:BaseURLString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary * response = (NSDictionary *)responseObject;
-        
-        if ([@"ok" isEqualToString:[response objectForKey:@"status"]]) {
-            NSLog(@"Success registering device token!");
-        } else {
-            UIAlertView *alertView =
-            [[UIAlertView alloc] initWithTitle:@"Error Registering Device! (1)"
-                                       message:@"Unexpected JSON status value"
-                                      delegate:nil
-                             cancelButtonTitle:@"OK"
-                             otherButtonTitles:nil ];
-            [alertView show];
-        }
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        UIAlertView *alertView =
-            [[UIAlertView alloc] initWithTitle:@"Error Registering Device! (2)"
-                                       message:[error localizedDescription]
-                                      delegate:nil
-                             cancelButtonTitle:@"OK"
-                             otherButtonTitles:nil];
-        [alertView show];
-    }];
-    
-    [operation start];
-}
+//static NSString * const BaseURLString = @"https://jd-mbp.local:8000/registerDevice";
+//
+//- (void) sendProviderDeviceToken:(NSData *)devToken {
+//    const void *devTokenBytes = [devToken bytes];
+//    NSURL *url = [NSURL URLWithString:BaseURLString];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    
+//    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+//    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+//    
+//    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSDictionary * response = (NSDictionary *)responseObject;
+//        
+//        if ([@"ok" isEqualToString:[response objectForKey:@"status"]]) {
+//            NSLog(@"Success registering device token!");
+//        } else {
+//            UIAlertView *alertView =
+//            [[UIAlertView alloc] initWithTitle:@"Error Registering Device! (1)"
+//                                       message:@"Unexpected JSON status value"
+//                                      delegate:nil
+//                             cancelButtonTitle:@"OK"
+//                             otherButtonTitles:nil ];
+//            [alertView show];
+//        }
+//
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        UIAlertView *alertView =
+//            [[UIAlertView alloc] initWithTitle:@"Error Registering Device! (2)"
+//                                       message:[error localizedDescription]
+//                                      delegate:nil
+//                             cancelButtonTitle:@"OK"
+//                             otherButtonTitles:nil];
+//        [alertView show];
+//    }];
+//    
+//    [operation start];
+//}
 @end
