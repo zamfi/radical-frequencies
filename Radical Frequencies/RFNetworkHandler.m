@@ -14,6 +14,7 @@
 - (id)initWithDelegate:(id <NetworkHandlerDelegate>)delegate {
     self = [super init];
     self.delegate = delegate;
+    self.lastTagTime = [[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]*1000] unsignedLongLongValue];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(pingServerForTags) userInfo:nil repeats:YES];
     
     self.checkUrl = [NSString stringWithFormat:@"http://jd-mbp.local:8000/checkForTags?shared_secret=%@", [@"O[RVeWmPrm4OIzmXz&C}w-CM!m:f7*I" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.!~*'()"]]];
