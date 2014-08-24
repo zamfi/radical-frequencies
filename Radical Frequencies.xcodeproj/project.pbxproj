@@ -49,6 +49,7 @@
 		69960C6C19A9695000CFFE96 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C5A19A9695000CFFE96 /* UIRefreshControl+AFNetworking.m */; };
 		69960C6D19A9695000CFFE96 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C5C19A9695000CFFE96 /* UIWebView+AFNetworking.m */; };
 		69960C7019A9741600CFFE96 /* RFNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C6F19A9741600CFFE96 /* RFNetworkHandler.m */; };
+		A9CA4CDA19A994C90053224E /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CA4CD219A994C90053224E /* libPayPalMobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,14 @@
 		69960C5C19A9695000CFFE96 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		69960C6E19A9741600CFFE96 /* RFNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNetworkHandler.h; sourceTree = "<group>"; };
 		69960C6F19A9741600CFFE96 /* RFNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNetworkHandler.m; sourceTree = "<group>"; };
+		A9CA4CD219A994C90053224E /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		A9CA4CD319A994C90053224E /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
+		A9CA4CD419A994C90053224E /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		A9CA4CD519A994C90053224E /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		A9CA4CD619A994C90053224E /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		A9CA4CD719A994C90053224E /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		A9CA4CD819A994C90053224E /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		A9CA4CD919A994C90053224E /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +150,7 @@
 				07CB7B9419A937BD0038031F /* QuartzCore.framework in Frameworks */,
 				07CB7B4F19A909B70038031F /* CoreGraphics.framework in Frameworks */,
 				07CB7B5119A909B70038031F /* UIKit.framework in Frameworks */,
+				A9CA4CDA19A994C90053224E /* libPayPalMobile.a in Frameworks */,
 				07CB7B4D19A909B70038031F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +171,7 @@
 		07CB7B4019A909B70038031F = {
 			isa = PBXGroup;
 			children = (
+				A9CA4CD119A994C90053224E /* PayPalMobile */,
 				07CB7B5219A909B70038031F /* Radical Frequencies */,
 				07CB7B7119A909B70038031F /* Radical FrequenciesTests */,
 				07CB7B4B19A909B70038031F /* Frameworks */,
@@ -295,6 +306,22 @@
 				69960C5C19A9695000CFFE96 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		A9CA4CD119A994C90053224E /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				A9CA4CD219A994C90053224E /* libPayPalMobile.a */,
+				A9CA4CD319A994C90053224E /* PayPalConfiguration.h */,
+				A9CA4CD419A994C90053224E /* PayPalFuturePaymentViewController.h */,
+				A9CA4CD519A994C90053224E /* PayPalMobile.h */,
+				A9CA4CD619A994C90053224E /* PayPalOAuthScopes.h */,
+				A9CA4CD719A994C90053224E /* PayPalPayment.h */,
+				A9CA4CD819A994C90053224E /* PayPalPaymentViewController.h */,
+				A9CA4CD919A994C90053224E /* PayPalProfileSharingViewController.h */,
+			);
+			name = PayPalMobile;
+			path = "../PayPal-iOS-SDK/PayPalMobile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,6 +580,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
 				INFOPLIST_FILE = "Radical Frequencies/Radical Frequencies-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/anca/dev/PayPal-iOS-SDK/PayPalMobile",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -566,6 +597,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
 				INFOPLIST_FILE = "Radical Frequencies/Radical Frequencies-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/anca/dev/PayPal-iOS-SDK/PayPalMobile",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
