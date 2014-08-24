@@ -10,7 +10,7 @@
 #import "MemberUIView.h"
 #import "RFNetworkHandler.h"
 
-@interface ViewController : UIViewController <NetworkHandlerDelegate>
+@interface ViewController : UIViewController <NetworkHandlerDelegate, UIGestureRecognizerDelegate>
 
 //@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 @property (strong, nonatomic) MemberUIView *MemberView;
@@ -32,6 +32,12 @@
 @property (strong, nonatomic) UIImageView *scheduleImage;
 
 @property (strong, nonatomic) NSTimer *bounce;
+
+
+@property (strong, nonatomic) UIImageView *lightBoxCurtains;
+
+@property (strong, nonatomic) UIImageView *activityDetails;
+
 
 @property (strong, nonatomic) RFNetworkHandler *networkHandler;
 

@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize goingUp, arrow, scheduleImage, bounce, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
+@synthesize goingUp, arrow, scheduleImage, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
 
 - (void)amuletWasTaggedByMember:(NSDictionary *)memberInfo shouldDisplay:(NSDictionary *)displayInfo {
     UIAlertView *alertView =
@@ -38,6 +38,10 @@
     
     self.scheduleImage = [[UIImageView alloc] init];
     self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-1.png"];
+    
+    self.lightBoxCurtains = [[UIImageView alloc] init];
+    self.lightBoxCurtains.image = [UIImage imageNamed:@"Curtain-1.png"];
+    self.lightBoxCurtains.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
     self.TLHeader = [[UIImageView alloc] init];
     self.TLHeader.image = [UIImage imageNamed:@"TechLiminalBanner.png"];
@@ -298,8 +302,156 @@
     [self.bounce invalidate];
     self.bounce = nil;
     
+    self.scheduleImage.userInteractionEnabled = YES;
+    UILongPressGestureRecognizer *tapGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+//    tapGesture.numberOfTapsRequired = 1;
+    tapGesture.minimumPressDuration = 0.1;
+    [self.scheduleImage addGestureRecognizer:tapGesture];
+    tapGesture.delegate = self;
 
+//    [tapGesture release];
 }
+
+-(void) handleTapGesture:(UIGestureRecognizer *) sender {
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"Hold.");
+        self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-Depressed-1.png"];
+    }
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"Release.");
+        self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-1.png"];
+        
+        self.lightBoxCurtains.alpha = 0.0;
+        [self.view addSubview:lightBoxCurtains];
+        [UIView animateWithDuration:0.3
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             
+                             self.lightBoxCurtains.alpha = 1.0;
+                         }
+                         completion:nil];
+        
+        [self showActivityDetails];
+        
+        
+
+    }
+
+//    
+//    NSLog(@"Tapped.");
+//
+//    CGPoint tapPoint = [sender locationInView:self.scheduleImage];
+//    int tapX = (int) tapPoint.x;
+//    int tapY = (int) tapPoint.y;
+//    NSLog(@"TAPPED X:%d Y:%d", tapX, tapY);
+//    
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"How are you?" delegate:nil cancelButtonTitle:@"I'm awesome." otherButtonTitles:nil];
+//    [alert show];
+}
+
+- (void) showActivityDetails
+{
+    
+    //    CGRectMake(0.1 * (self.view.frame.size.width), 0.1 * (self.view.frame.size.height), 0.8 * (self.view.frame.size.width), 0.8 * (self.view.frame.size.height))
+
+    
+    self.activityDetails = [[UIImageView alloc] init];
+    self.activityDetails.image = [UIImage imageNamed:@"Lightbox-1.png"];
+    self.activityDetails.frame = CGRectMake(0.02 * (self.view.frame.size.width), 0.02 * (self.view.frame.size.height), 0.96 * (self.view.frame.size.width), 0.96 * (self.view.frame.size.height));
+    self.activityDetails.contentMode = UIViewContentModeScaleAspectFit;
+    
+    self.activityDetails.alpha = 0.0;
+    [self.view addSubview:self.activityDetails];
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         self.activityDetails.alpha = 1.0;
+                     }
+                     completion:nil];
+
+    
+//    [self.view addSubview:self.activityDetails];
+
+    self.activityDetails.userInteractionEnabled = YES;
+    UILongPressGestureRecognizer *activityTapGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleActivityTapGesture:)];
+    //    tapGesture.numberOfTapsRequired = 1;
+    activityTapGesture.minimumPressDuration = 0.01;
+    [self.activityDetails addGestureRecognizer:activityTapGesture];
+    activityTapGesture.delegate = self;
+    
+    //    [tapGesture release];
+}
+
+-(void) handleActivityTapGesture:(UIGestureRecognizer *) sender {
+//    if (sender.state == UIGestureRecognizerStateBegan) {
+//        NSLog(@"Hold.");
+//        self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-Depressed-1.png"];
+//    }
+//    
+//    if (sender.state == UIGestureRecognizerStateEnded) {
+//        NSLog(@"Release.");
+//        self.scheduleImage.image = [UIImage imageNamed:@"OrangePanel-1.png"];
+//        
+//        self.lightBoxCurtains.alpha = 0.0;
+//        [self.view addSubview:lightBoxCurtains];
+//        [UIView animateWithDuration:0.3
+//                              delay:0
+//                            options:UIViewAnimationOptionCurveEaseIn
+//                         animations:^{
+//                             
+//                             self.lightBoxCurtains.alpha = 1.0;
+//                         }
+//                         completion:nil];
+//        
+//        [self showActivityDetails];
+//        
+//        
+//        
+//    }
+    
+
+    NSLog(@"Activity tapped.");
+
+    CGPoint tapPoint = [sender locationInView:self.activityDetails];
+    int tapX = (int) tapPoint.x;
+    int tapY = (int) tapPoint.y;
+    NSLog(@"TAPPED X:%d Y:%d", tapX, tapY);
+
+    if (tapX >= 627 && tapX <= 699 && tapY >= 40 && tapY <= 109) {
+        [UIView animateWithDuration:0.3
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             
+                             self.activityDetails.alpha = 0.0;
+                         }
+                         completion:nil];
+        
+        [UIView animateWithDuration:0.3
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             
+                             self.lightBoxCurtains.alpha = 0.0;
+                         }
+                         completion:nil];
+
+    }
+    
+//    x from 627 to 699
+//    y from 40 to 109
+
+    
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"How are you?" delegate:nil cancelButtonTitle:@"I'm awesome." otherButtonTitles:nil];
+//    [alert show];
+    
+}
+
+
 
 - (void)moveImage:(UIImageView *)image duration:(NSTimeInterval)duration
             curve:(int)curve x:(CGFloat)x y:(CGFloat)y
