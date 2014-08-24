@@ -35,12 +35,12 @@
         NSDictionary * response = (NSDictionary *)responseObject;
         
         if ([@"ok" isEqualToString:[response objectForKey:@"status"]]) {
-            NSLog(@"Success getting display data! %@", response);
+//            NSLog(@"Success getting display data! %@", response);
             NSDictionary *data = [response objectForKey:@"data"];
             [self.delegate amuletWasTaggedByMember:[data objectForKey:@"member"]
                                      shouldDisplay:[data objectForKey:@"events"]];
         } else {
-            NSLog(@"Weird json value: %@", response);
+//            NSLog(@"Weird json value: %@", response);
             UIAlertView *alertView =
             [[UIAlertView alloc] initWithTitle:@"Error getting display data! (1)"
                                        message:@"Unexpected JSON status value"
@@ -80,14 +80,14 @@
         NSDictionary * response = (NSDictionary *)responseObject;
 
         if ([@"ok" isEqualToString:[response objectForKey:@"status"]]) {
-            NSLog(@"Success checking for tags since %llu! %@", self.lastTagTime, response);
+//            NSLog(@"Success checking for tags since %llu! %@", self.lastTagTime, response);
             NSDictionary *lastId = [[response objectForKey:@"tags"] lastObject];
             if (lastId != NULL) {
                 self.lastTagTime = [[lastId objectForKey:@"date"] unsignedLongLongValue];
                 [self pullMemberDisplayData:[[lastId objectForKey:@"id"] unsignedIntValue]];
             }
         } else {
-            NSLog(@"Weird json value: %@", response);
+//            NSLog(@"Weird json value: %@", response);
             UIAlertView *alertView =
             [[UIAlertView alloc] initWithTitle:@"Error checking for tags! (1)"
                                        message:@"Unexpected JSON status value"
