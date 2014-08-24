@@ -261,12 +261,15 @@
     [self.greetingsI addSubview:name];
 
     [self.welcomeI setFont:[UIFont fontWithName:@"AvenirNext-UltraLight" size:46]];
+    [self.welcomeI setFrame:CGRectMake(self.welcomeI.frame.origin.x, self.view.frame.size.height / 2, self.welcomeI.frame.size.width, self.welcomeI.frame.size.height)];
+    
+    [self.view addSubview:self.welcomeI];
     
     [UIView animateWithDuration:0.5
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         [self.welcomeI setFrame:CGRectMake(self.welcomeI.frame.origin.x, self.welcomeI.frame.origin.y - 70, self.welcomeI.frame.size.width, self.welcomeI.frame.size.height)];
+                         [self.welcomeI setFrame:CGRectMake(self.welcomeI.frame.origin.x, self.view.frame.size.height / 2 - 70, self.welcomeI.frame.size.width, self.welcomeI.frame.size.height)];
                      }
                      completion:nil];
 
