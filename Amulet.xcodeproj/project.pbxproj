@@ -64,11 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07CB7B4919A909B70038031F /* Radical Frequencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radical Frequencies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CB7B4919A909B70038031F /* Amulet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amulet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CB7B4C19A909B70038031F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07CB7B4E19A909B70038031F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		07CB7B5019A909B70038031F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		07CB7B5419A909B70038031F /* Radical Frequencies-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Radical Frequencies-Info.plist"; sourceTree = "<group>"; };
+		07CB7B5419A909B70038031F /* Amulet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Amulet-Info.plist"; sourceTree = "<group>"; };
 		07CB7B5619A909B70038031F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07CB7B5819A909B70038031F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07CB7B5A19A909B70038031F /* Radical Frequencies-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Radical Frequencies-Prefix.pch"; sourceTree = "<group>"; };
@@ -78,9 +78,9 @@
 		07CB7B6119A909B70038031F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		07CB7B6219A909B70038031F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		07CB7B6419A909B70038031F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		07CB7B6A19A909B70038031F /* Radical FrequenciesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Radical FrequenciesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CB7B6A19A909B70038031F /* AmuletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmuletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CB7B6B19A909B70038031F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		07CB7B7319A909B70038031F /* Radical FrequenciesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Radical FrequenciesTests-Info.plist"; sourceTree = "<group>"; };
+		07CB7B7319A909B70038031F /* AmuletTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmuletTests-Info.plist"; sourceTree = "<group>"; };
 		07CB7B7519A909B70038031F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07CB7B7719A909B70038031F /* Radical_FrequenciesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Radical_FrequenciesTests.m; sourceTree = "<group>"; };
 		07CB7B8319A9163F0038031F /* MemberInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberInfoViewController.h; sourceTree = "<group>"; };
@@ -184,8 +184,8 @@
 		07CB7B4A19A909B70038031F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07CB7B4919A909B70038031F /* Radical Frequencies.app */,
-				07CB7B6A19A909B70038031F /* Radical FrequenciesTests.xctest */,
+				07CB7B4919A909B70038031F /* Amulet.app */,
+				07CB7B6A19A909B70038031F /* AmuletTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 		07CB7B5319A909B70038031F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07CB7B5419A909B70038031F /* Radical Frequencies-Info.plist */,
+				07CB7B5419A909B70038031F /* Amulet-Info.plist */,
 				07CB7B5519A909B70038031F /* InfoPlist.strings */,
 				07CB7B5819A909B70038031F /* main.m */,
 				07CB7B5A19A909B70038031F /* Radical Frequencies-Prefix.pch */,
@@ -255,7 +255,7 @@
 		07CB7B7219A909B70038031F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07CB7B7319A909B70038031F /* Radical FrequenciesTests-Info.plist */,
+				07CB7B7319A909B70038031F /* AmuletTests-Info.plist */,
 				07CB7B7419A909B70038031F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -329,9 +329,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07CB7B4819A909B70038031F /* Radical Frequencies */ = {
+		07CB7B4819A909B70038031F /* Amulet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07CB7B7B19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical Frequencies" */;
+			buildConfigurationList = 07CB7B7B19A909B70038031F /* Build configuration list for PBXNativeTarget "Amulet" */;
 			buildPhases = (
 				07CB7B4519A909B70038031F /* Sources */,
 				07CB7B4619A909B70038031F /* Frameworks */,
@@ -341,14 +341,14 @@
 			);
 			dependencies = (
 			);
-			name = "Radical Frequencies";
+			name = Amulet;
 			productName = "Radical Frequencies";
-			productReference = 07CB7B4919A909B70038031F /* Radical Frequencies.app */;
+			productReference = 07CB7B4919A909B70038031F /* Amulet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07CB7B6919A909B70038031F /* Radical FrequenciesTests */ = {
+		07CB7B6919A909B70038031F /* AmuletTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07CB7B7E19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical FrequenciesTests" */;
+			buildConfigurationList = 07CB7B7E19A909B70038031F /* Build configuration list for PBXNativeTarget "AmuletTests" */;
 			buildPhases = (
 				07CB7B6619A909B70038031F /* Sources */,
 				07CB7B6719A909B70038031F /* Frameworks */,
@@ -359,9 +359,9 @@
 			dependencies = (
 				07CB7B7019A909B70038031F /* PBXTargetDependency */,
 			);
-			name = "Radical FrequenciesTests";
+			name = AmuletTests;
 			productName = "Radical FrequenciesTests";
-			productReference = 07CB7B6A19A909B70038031F /* Radical FrequenciesTests.xctest */;
+			productReference = 07CB7B6A19A909B70038031F /* AmuletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -378,7 +378,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07CB7B4419A909B70038031F /* Build configuration list for PBXProject "Radical Frequencies" */;
+			buildConfigurationList = 07CB7B4419A909B70038031F /* Build configuration list for PBXProject "Amulet" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -391,8 +391,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07CB7B4819A909B70038031F /* Radical Frequencies */,
-				07CB7B6919A909B70038031F /* Radical FrequenciesTests */,
+				07CB7B4819A909B70038031F /* Amulet */,
+				07CB7B6919A909B70038031F /* AmuletTests */,
 			);
 		};
 /* End PBXProject section */
@@ -470,7 +470,7 @@
 /* Begin PBXTargetDependency section */
 		07CB7B7019A909B70038031F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07CB7B4819A909B70038031F /* Radical Frequencies */;
+			target = 07CB7B4819A909B70038031F /* Amulet */;
 			targetProxy = 07CB7B6F19A909B70038031F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -581,14 +581,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
-				INFOPLIST_FILE = "Radical Frequencies/Radical Frequencies-Info.plist";
+				GCC_PREFIX_HEADER = "Radical Frequencies/Amulet-Prefix.pch";
+				INFOPLIST_FILE = "Radical Frequencies/Amulet-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/anca/dev/PayPal-iOS-SDK/PayPalMobile",
 					"$(PROJECT_DIR)/PayPalMobile",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Amulet;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -599,14 +599,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
-				INFOPLIST_FILE = "Radical Frequencies/Radical Frequencies-Info.plist";
+				GCC_PREFIX_HEADER = "Radical Frequencies/Amulet-Prefix.pch";
+				INFOPLIST_FILE = "Radical Frequencies/Amulet-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/anca/dev/PayPal-iOS-SDK/PayPalMobile",
 					"$(PROJECT_DIR)/PayPalMobile",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Amulet;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -626,8 +626,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Radical FrequenciesTests/Radical FrequenciesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Radical FrequenciesTests/AmuletTests-Info.plist";
+				PRODUCT_NAME = AmuletTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -644,8 +644,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Radical Frequencies/Radical Frequencies-Prefix.pch";
-				INFOPLIST_FILE = "Radical FrequenciesTests/Radical FrequenciesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Radical FrequenciesTests/AmuletTests-Info.plist";
+				PRODUCT_NAME = AmuletTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -654,7 +654,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07CB7B4419A909B70038031F /* Build configuration list for PBXProject "Radical Frequencies" */ = {
+		07CB7B4419A909B70038031F /* Build configuration list for PBXProject "Amulet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07CB7B7919A909B70038031F /* Debug */,
@@ -663,7 +663,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07CB7B7B19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical Frequencies" */ = {
+		07CB7B7B19A909B70038031F /* Build configuration list for PBXNativeTarget "Amulet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07CB7B7C19A909B70038031F /* Debug */,
@@ -672,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07CB7B7E19A909B70038031F /* Build configuration list for PBXNativeTarget "Radical FrequenciesTests" */ = {
+		07CB7B7E19A909B70038031F /* Build configuration list for PBXNativeTarget "AmuletTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07CB7B7F19A909B70038031F /* Debug */,

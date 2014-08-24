@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07CB7B4819A909B70038031F"
                BuildableName = "Radical Frequencies.app"
-               BlueprintName = "Radical Frequencies"
-               ReferencedContainer = "container:Radical Frequencies.xcodeproj">
+               BlueprintName = "Amulet"
+               ReferencedContainer = "container:Amulet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07CB7B6919A909B70038031F"
                BuildableName = "Radical FrequenciesTests.xctest"
-               BlueprintName = "Radical FrequenciesTests"
-               ReferencedContainer = "container:Radical Frequencies.xcodeproj">
+               BlueprintName = "AmuletTests"
+               ReferencedContainer = "container:Amulet.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07CB7B4819A909B70038031F"
             BuildableName = "Radical Frequencies.app"
-            BlueprintName = "Radical Frequencies"
-            ReferencedContainer = "container:Radical Frequencies.xcodeproj">
+            BlueprintName = "Amulet"
+            ReferencedContainer = "container:Amulet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07CB7B4819A909B70038031F"
             BuildableName = "Radical Frequencies.app"
-            BlueprintName = "Radical Frequencies"
-            ReferencedContainer = "container:Radical Frequencies.xcodeproj">
+            BlueprintName = "Amulet"
+            ReferencedContainer = "container:Amulet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07CB7B4819A909B70038031F"
             BuildableName = "Radical Frequencies.app"
-            BlueprintName = "Radical Frequencies"
-            ReferencedContainer = "container:Radical Frequencies.xcodeproj">
+            BlueprintName = "Amulet"
+            ReferencedContainer = "container:Amulet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
