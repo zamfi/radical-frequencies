@@ -12,18 +12,24 @@
 @interface ViewController : UIViewController
 
 //@property (weak, nonatomic) IBOutlet UIWebView *WebView;
-@property (weak, nonatomic) MemberUIView *MemberView;
+@property (strong, nonatomic) MemberUIView *MemberView;
 
 @property (assign, nonatomic) BOOL goingUp;
 @property (strong, nonatomic) UIImageView *arrow;
 
-@property (weak, nonatomic) UILabel *welcomeI;
+@property (strong, nonatomic) UIImageView *TLHeader;
 
-@property (weak, nonatomic) UIView *greetingsI;
-@property (weak, nonatomic) UILabel *helloI;
-@property (weak, nonatomic) UILabel *nameI;
+@property (strong, nonatomic) UIView *welcomeView;
+@property (strong, nonatomic) UILabel *welcomeI;
+@property (strong, nonatomic) UILabel *touchAmuletI;
 
-@property (weak,nonatomic) UIView *scheduleI;
+@property (strong, nonatomic) UIView *greetingsI;
+@property (strong, nonatomic) UILabel *helloI;
+@property (strong, nonatomic) UILabel *nameI;
+
+@property (strong, nonatomic) UIView *scheduleI;
+
+@property (strong, nonatomic) NSTimer *bounce;
 
 - (IBAction)ShowLightbox:(id)sender;
 
