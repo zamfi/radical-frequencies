@@ -17,13 +17,15 @@
 @synthesize goingUp, arrow, scheduleImage, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
 
 - (void)amuletWasTaggedByMember:(NSDictionary *)memberInfo shouldDisplay:(NSDictionary *)displayInfo {
-    UIAlertView *alertView =
-    [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Welcome, %@!", [memberInfo objectForKey:@"firstName"]]
-                               message:@"Good to see you again!"
-                              delegate:nil
-                     cancelButtonTitle:@"OK"
-                     otherButtonTitles:nil ];
-    [alertView show];
+//    UIAlertView *alertView =
+//    [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Welcome, %@!", [memberInfo objectForKey:@"firstName"]]
+//                               message:@"Good to see you again!"
+//                              delegate:nil
+//                     cancelButtonTitle:@"OK"
+//                     otherButtonTitles:nil ];
+//    [alertView show];
+    
+    [self displayMemberInfo:[memberInfo objectForKey:@"firstName"]];
 }
 
 - (void)viewDidLoad
@@ -135,7 +137,9 @@
 
 - (IBAction)ShowLightbox:(id)sender {
     
-    [self displayMemberInfo];
+    NSString *memberName = @"Joseph";
+    
+    [self displayMemberInfo:memberName];
     
 //    [UIView transitionWithView:self.view
 //                      duration:0.25
@@ -147,7 +151,7 @@
 
 }
 
-- (void) displayMemberInfo {
+- (void) displayMemberInfo:(NSString*)memberName {
     NSLog(@"Inserting subview.");
     
     
@@ -218,7 +222,7 @@
     nameFrame.size.height = 80;
     
     UILabel *name = [[UILabel alloc] initWithFrame:nameFrame];
-    [name setText:@"J.D."];
+    [name setText:memberName];
     [name setTextAlignment:UITextAlignmentCenter];
     [name setFont:[UIFont fontWithName:@"AvenirNext-UltraLight" size:78]];
     
