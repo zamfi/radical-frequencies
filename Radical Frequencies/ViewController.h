@@ -15,6 +15,9 @@
 //@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 @property (strong, nonatomic) MemberUIView *MemberView;
 
+@property (strong, nonatomic) NSString *latestCheckinName;
+@property (assign, nonatomic) BOOL awaitingPaymentConfirmtion;
+
 @property (assign, nonatomic) BOOL displayingMemberInfo;
 
 @property (assign, nonatomic) BOOL goingUp;
@@ -41,6 +44,7 @@
 @property (strong, nonatomic) UIImageView *activityDetails;
 
 @property (strong, nonatomic) UIImageView *payPrompt;
+@property (strong, nonatomic) UIImageView *payCheckmark;
 
 
 @property (strong, nonatomic) RFNetworkHandler *networkHandler;

@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize displayingMemberInfo, goingUp, arrow, scheduleImage, payPrompt, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
+@synthesize displayingMemberInfo, goingUp, arrow, latestCheckinName, awaitingPaymentConfirmtion, scheduleImage, payPrompt, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
 
 - (void)amuletWasTaggedByMember:(NSDictionary *)memberInfo shouldDisplay:(NSDictionary *)displayInfo {
 //    UIAlertView *alertView =
@@ -27,12 +27,39 @@
     
     if (self.displayingMemberInfo == true) {
         
-        [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//        NSString *thisName = [[NSString alloc] init];
+//        thisName = [memberInfo objectForKey:@"firstName"];
+//        bool awaiting = self.awaitingPaymentConfirmtion;
+//        
+//        if (self.awaitingPaymentConfirmtion == true) {
+//            NSLog(@"y, awaiting pay");
+//        } else {
+//            NSLog(@"n, NOT awaiting pay");
+//        }
+//
+        if ([self.latestCheckinName isEqualToString:[memberInfo objectForKey:@"firstName"]]) {
+            NSLog(@"y, same name");
+            if (self.awaitingPaymentConfirmtion == true) {
+
+                NSLog(@"Payment confirmed!");
+                
+                [self confirmPayment];
+                
+            }
+        } else {
         
-        [self displayMemberInfo:[memberInfo objectForKey:@"firstName"]];
-    
+            self.awaitingPaymentConfirmtion = false;
+            [[self.view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            
+            [self displayMemberInfo:[memberInfo objectForKey:@"firstName"]];
+            
+            NSLog(@"Replacing current view!!");
+        
+        }
+        
     } else {
         
+        self.awaitingPaymentConfirmtion = false;
         [self displayMemberInfo:[memberInfo objectForKey:@"firstName"]];
     
     }
@@ -43,6 +70,13 @@
 //    
 //}
 
+- (void) confirmPayment
+{
+    
+    
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -50,6 +84,8 @@
     self.networkHandler = [[RFNetworkHandler alloc] initWithDelegate:self];
     
     [self setUpHomescreen];
+    
+    self.latestCheckinName = [[NSString alloc] initWithFormat:@"none"];
     
 }
 
@@ -61,7 +97,12 @@
 
 - (void) setUpHomescreen
 {
+    self.awaitingPaymentConfirmtion = false;
     self.displayingMemberInfo = false;
+    
+    self.payCheckmark = [[UIImageView alloc] init];
+    self.payCheckmark.image = [UIImage imageNamed:@"Completed-Payment-Check.png"];
+    [self.view addSubview:self.payCheckmark];
     
     self.goingUp = true;
     self.arrow = [[UIImageView alloc] init];
@@ -191,6 +232,8 @@
 - (void) displayMemberInfo:(NSString*)memberName {
     NSLog(@"Inserting subview.");
     
+    
+    self.latestCheckinName = memberName;
     
 //    CGRect lbFrame = self.MemberView.frame;
 //    
@@ -524,6 +567,8 @@
                              [self.payPrompt setFrame:CGRectMake(0, 488, 768, 536)];
                          }
                          completion:nil];
+        
+        self.awaitingPaymentConfirmtion = true;
         
         [self arrowPrompt];
         

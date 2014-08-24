@@ -32,6 +32,7 @@
 		07CB7BA219A985920038031F /* Curtain-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7BA119A985920038031F /* Curtain-1.png */; };
 		07CB7BA419A989360038031F /* Lightbox-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7BA319A989360038031F /* Lightbox-1.png */; };
 		07CB7BA619A99C3A0038031F /* PayPrompt-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7BA519A99C3A0038031F /* PayPrompt-1.png */; };
+		07CB7BB019AA61F00038031F /* Completed-Payment-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7BAF19AA61F00038031F /* Completed-Payment-Check.png */; };
 		69960C5D19A9695000CFFE96 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C3919A9695000CFFE96 /* AFHTTPRequestOperation.m */; };
 		69960C5E19A9695000CFFE96 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C3B19A9695000CFFE96 /* AFHTTPRequestOperationManager.m */; };
 		69960C5F19A9695000CFFE96 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C3D19A9695000CFFE96 /* AFHTTPSessionManager.m */; };
@@ -96,6 +97,7 @@
 		07CB7BA119A985920038031F /* Curtain-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Curtain-1.png"; sourceTree = "<group>"; };
 		07CB7BA319A989360038031F /* Lightbox-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lightbox-1.png"; sourceTree = "<group>"; };
 		07CB7BA519A99C3A0038031F /* PayPrompt-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PayPrompt-1.png"; sourceTree = "<group>"; };
+		07CB7BAF19AA61F00038031F /* Completed-Payment-Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Completed-Payment-Check.png"; sourceTree = "<group>"; };
 		69960C3819A9695000CFFE96 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		69960C3919A9695000CFFE96 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		69960C3A19A9695000CFFE96 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				07CB7BA119A985920038031F /* Curtain-1.png */,
 				07CB7BA319A989360038031F /* Lightbox-1.png */,
 				07CB7BA519A99C3A0038031F /* PayPrompt-1.png */,
+				07CB7BAF19AA61F00038031F /* Completed-Payment-Check.png */,
 				07CB7B5B19A909B70038031F /* AppDelegate.h */,
 				07CB7B5C19A909B70038031F /* AppDelegate.m */,
 				07CB7B5E19A909B70038031F /* Main.storyboard */,
@@ -403,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07CB7BA419A989360038031F /* Lightbox-1.png in Resources */,
+				07CB7BB019AA61F00038031F /* Completed-Payment-Check.png in Resources */,
 				07CB7B8719A9163F0038031F /* MemberInfoViewController.xib in Resources */,
 				07CB7B6519A909B70038031F /* Images.xcassets in Resources */,
 				07CB7B5719A909B70038031F /* InfoPlist.strings in Resources */,
