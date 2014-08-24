@@ -54,6 +54,7 @@
 		69960C6C19A9695000CFFE96 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C5A19A9695000CFFE96 /* UIRefreshControl+AFNetworking.m */; };
 		69960C6D19A9695000CFFE96 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C5C19A9695000CFFE96 /* UIWebView+AFNetworking.m */; };
 		69960C7019A9741600CFFE96 /* RFNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C6F19A9741600CFFE96 /* RFNetworkHandler.m */; };
+		69BE1A8419AA730500A432B0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BE1A8319AA730500A432B0 /* CoreMedia.framework */; };
 		A9CA4CE419A995B90053224E /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CA4CDC19A995B90053224E /* libPayPalMobile.a */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		69960C5C19A9695000CFFE96 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		69960C6E19A9741600CFFE96 /* RFNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNetworkHandler.h; sourceTree = "<group>"; };
 		69960C6F19A9741600CFFE96 /* RFNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNetworkHandler.m; sourceTree = "<group>"; };
+		69BE1A8319AA730500A432B0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		A9CA4CDC19A995B90053224E /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
 		A9CA4CDD19A995B90053224E /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
 		A9CA4CDE19A995B90053224E /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69BE1A8419AA730500A432B0 /* CoreMedia.framework in Frameworks */,
 				07CB7BBD19AA709E0038031F /* AudioToolbox.framework in Frameworks */,
 				07CB7BBB19AA6C970038031F /* AVFoundation.framework in Frameworks */,
 				07CB7B9419A937BD0038031F /* QuartzCore.framework in Frameworks */,
@@ -211,6 +214,7 @@
 		07CB7B4B19A909B70038031F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69BE1A8319AA730500A432B0 /* CoreMedia.framework */,
 				07CB7BBC19AA709E0038031F /* AudioToolbox.framework */,
 				07CB7BBA19AA6C970038031F /* AVFoundation.framework */,
 				07CB7B9319A937BD0038031F /* QuartzCore.framework */,
