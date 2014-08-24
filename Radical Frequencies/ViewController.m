@@ -140,6 +140,7 @@
     [self setUpHomescreen];
     
     self.latestCheckinName = [[NSString alloc] initWithFormat:@"none"];
+    self.payingWithPayPal = true;
     
 }
 
@@ -631,7 +632,15 @@
     
     if (tapX >= 255 && tapX <= 480 && tapY >= 714 && tapY <= 767) {
         
+        
+        
         NSLog(@"Paying with PayPal!");
+        
+        if (self.payingWithPayPal == true) {
+            [self payWithPayPal];
+        }
+        
+        self.payingWithPayPal = false;
         
     }
 
@@ -643,6 +652,29 @@
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"How are you?" delegate:nil cancelButtonTitle:@"I'm awesome." otherButtonTitles:nil];
 //    [alert show];
     
+}
+
+- (void)payWithPayPal
+{
+    CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
+    scanViewController.appToken = @"d2530b86b1e74be79fca10abdb49e69a"; // get your app token from the card.io website
+    [self presentModalViewController:scanViewController animated:YES];
+}
+
+- (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    NSLog(@"User canceled payment info");
+    // Handle user cancellation here...
+    [scanViewController dismissModalViewControllerAnimated:YES];
+    self.payingWithPayPal = true;
+}
+
+- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    // The full card number is available as info.cardNumber, but don't log that!
+    NSLog(@"Received card info. Number: %@, expiry: %02i/%i, cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
+    // Use the card info...
+    [scanViewController dismissModalViewControllerAnimated:YES];
+    self.payingWithPayPal = true;
+    [self confirmPayment];
 }
 
 - (void) arrowPrompt

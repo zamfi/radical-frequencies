@@ -34,7 +34,8 @@
 		07CB7BA619A99C3A0038031F /* PayPrompt-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7BA519A99C3A0038031F /* PayPrompt-1.png */; };
 		07CB7BB019AA61F00038031F /* Completed-Payment-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB7BAF19AA61F00038031F /* Completed-Payment-Check.png */; };
 		07CB7BB919AA6C0D0038031F /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7BB819AA6C0D0038031F /* libCardIO.a */; };
-		07CB7BBB19AA6C970038031F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7BBA19AA6C970038031F /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		07CB7BBB19AA6C970038031F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7BBA19AA6C970038031F /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		07CB7BBD19AA709E0038031F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB7BBC19AA709E0038031F /* AudioToolbox.framework */; };
 		69960C5D19A9695000CFFE96 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C3919A9695000CFFE96 /* AFHTTPRequestOperation.m */; };
 		69960C5E19A9695000CFFE96 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C3B19A9695000CFFE96 /* AFHTTPRequestOperationManager.m */; };
 		69960C5F19A9695000CFFE96 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69960C3D19A9695000CFFE96 /* AFHTTPSessionManager.m */; };
@@ -108,6 +109,7 @@
 		07CB7BB719AA6C0D0038031F /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
 		07CB7BB819AA6C0D0038031F /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 		07CB7BBA19AA6C970038031F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		07CB7BBC19AA709E0038031F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		69960C3819A9695000CFFE96 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		69960C3919A9695000CFFE96 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		69960C3A19A9695000CFFE96 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CB7BBD19AA709E0038031F /* AudioToolbox.framework in Frameworks */,
 				07CB7BBB19AA6C970038031F /* AVFoundation.framework in Frameworks */,
 				07CB7B9419A937BD0038031F /* QuartzCore.framework in Frameworks */,
 				07CB7BB919AA6C0D0038031F /* libCardIO.a in Frameworks */,
@@ -208,6 +211,7 @@
 		07CB7B4B19A909B70038031F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07CB7BBC19AA709E0038031F /* AudioToolbox.framework */,
 				07CB7BBA19AA6C970038031F /* AVFoundation.framework */,
 				07CB7B9319A937BD0038031F /* QuartzCore.framework */,
 				07CB7B4C19A909B70038031F /* Foundation.framework */,
