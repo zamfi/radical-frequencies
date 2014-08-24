@@ -40,6 +40,8 @@
 
 @property (strong, nonatomic) UIImageView *activityDetails;
 
+@property (strong, nonatomic) UIImageView *payPrompt;
+
 
 @property (strong, nonatomic) RFNetworkHandler *networkHandler;
 

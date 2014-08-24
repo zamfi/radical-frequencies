@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize displayingMemberInfo, goingUp, arrow, scheduleImage, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
+@synthesize displayingMemberInfo, goingUp, arrow, scheduleImage, payPrompt, bounce, lightBoxCurtains, activityDetails, TLHeader, touchAmuletI, MemberView, welcomeI, greetingsI, helloI, nameI, scheduleI, welcomeView;
 
 - (void)amuletWasTaggedByMember:(NSDictionary *)memberInfo shouldDisplay:(NSDictionary *)displayInfo {
 //    UIAlertView *alertView =
@@ -74,10 +74,14 @@
     self.lightBoxCurtains.image = [UIImage imageNamed:@"Curtain-1.png"];
     self.lightBoxCurtains.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
+    self.payPrompt = [[UIImageView alloc] init];
+    self.payPrompt.image = [UIImage imageNamed:@"PayPrompt-1.png"];
+    self.payPrompt.frame = CGRectMake(0, self.view.frame.size.height, 768, 536);
+    
     self.TLHeader = [[UIImageView alloc] init];
     self.TLHeader.image = [UIImage imageNamed:@"TechLiminalBanner.png"];
     self.TLHeader.frame = CGRectMake(0, -302, 768, 302);
-    [self.view addSubview:TLHeader];
+    [self.view addSubview:self.TLHeader];
     
     [UIView animateWithDuration:1.5 animations:^{
         self.TLHeader.frame = CGRectMake(0, 0, 768, 302);
@@ -481,8 +485,41 @@
                              self.lightBoxCurtains.alpha = 0.0;
                          }
                          completion:nil];
+        
+        [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
 
     }
+    
+    if (tapX >= 512 && tapX <= 662 && tapY >= 345 && tapY <= 442) {
+
+        NSLog(@"Display payment");
+        
+        [self.view addSubview:self.payPrompt];
+        
+        self.payPrompt.alpha = 0.0;
+        [self.payPrompt setFrame:CGRectMake(0, self.view.frame.size.height, 768, 536)];
+        
+        int currentOriginY = self.payPrompt.frame.origin.y - self.payPrompt.frame.size.height;
+        NSLog(@"%d", currentOriginY);
+        
+        [UIView animateWithDuration:0.3
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             self.payPrompt.alpha = 1.0;
+                         }
+                         completion:nil];
+        
+        [UIView animateWithDuration:0.3
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             [self.payPrompt setFrame:CGRectMake(0, 488, 768, 536)];
+                         }
+                         completion:nil];
+        
+    }
+
     
 //    x from 627 to 699
 //    y from 40 to 109
